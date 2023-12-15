@@ -1,0 +1,67 @@
+@import "./reset.css";
+
+.faq {
+  --background-faq: #282c34;
+  --background-summary: #21252b;
+  --text-color: #fff;
+  --text-color-secondary: #a9b1d6;
+  --text-color-content: #c8ccd4;
+  --border-color: #3b4048;
+
+  width: 31.25rem;
+  margin: 0 auto;
+  padding: 1.25rem;
+  background-color: var(--background-faq);
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.5);
+  border-radius: 0.625rem;
+  line-height: 1.7;
+}
+
+.faq__header {
+  text-align: center;
+  margin-bottom: 0.625rem;
+
+  .faq__mainTitle {
+    color: var(--text-color);
+  }
+}
+
+.faq__title {
+  color: var(--text-color-secondary);
+  text-align: center;
+  margin-bottom: 0.9375rem;
+}
+
+.faq__article {
+  padding: 0.625rem;
+
+  .faq__item {
+    margin-bottom: 0.625rem;
+    border: 0.0625rem solid var(--border-color);
+    border-radius: 0.3125rem;
+    overflow: hidden;
+
+    &[open] > summary {
+      list-style-type: "📖";
+    }
+  }
+
+  .faq__summary {
+    list-style-type: "📘";
+    padding: 0.625rem;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--text-color);
+    background-color: var(--background-summary);
+
+    &::marker {
+      font-size: 1.1em;
+    }
+  }
+
+  .faq__content {
+    padding: 0.625rem;
+    border-top: 0.0625rem solid var(--border-color);
+    color: var(--text-color-content);
+  }
+}
